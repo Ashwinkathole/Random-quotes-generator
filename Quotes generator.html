@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width:500px;
+            height:220px;
+            flex-direction: column;
+            background-color: rgb(194, 223, 236);
+            color:black;
+            border: 3px solid black;
+            
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            background-color: rgb(211, 169, 62);
+            height:40px;
+            border: 1px solid black;
+            border-radius: 10px;
+            width:180px;
+        }
+        p{
+            border: 2px solid black;
+            height:70px;
+            width:280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p id="display-Quotes">Click the button to display a quotes</p><br>
+        <button onclick="quoteDisplay()">Click here to display a quote</button>
+    </div>
+
+
+
+    <script>
+        const quotes=[
+        "We cannot solve problems with the kind of thinking we employed when we came up with them. —Albert Einstein",
+        "Learn as if you will live forever, live like you will die tomorrow.  —Mahatma Gandhi",
+        "When you change your thoughts, remember to also change your world. —Norman Vincent Peale",
+        "Success is not final; failure is not fatal: It is the courage to continue that counts. —Winston Churchill",
+        "Develop success from failures. Discouragement and failure are two of the surest stepping stones to success. —Dale Carnegie",
+        "I never dreamed about success. I worked for it. —Estée Lauder",
+        "Success is getting what you want; happiness is wanting what you get.―W. P. Kinsella",
+        "To know how much there is to know is the beginning of learning to live.” —Dorothy West",
+        "Goal setting is the secret to a compelling future. —Tony Robbins",
+        "Experience is a hard teacher because she gives the test first, the lesson afterward. ―Vernon Sanders Law",
+        ]
+
+        function quoteDisplay(){
+            var randomIndex=Math.floor(Math.random()* quotes.length);
+            var randomQuotes=quotes[randomIndex];
+            console.log(randomQuotes);
+            var inputQuote=document.getElementById("display-Quotes");
+            inputQuote.innerHTML=randomQuotes;
+
+        }
+
+
+    </script>
+</body>
+</html>
